@@ -20,3 +20,15 @@ function adicionarAmigo() {
         alert('Amigo já adicionado.');
     }
 }
+
+// Função para atualizar a lista de amigos na tela
+function atualizarLista() {
+    const listaAmigos = document.getElementById('listaAmigos');
+    listaAmigos.innerHTML = ''; // Limpar a lista antes de adicionar os novos amigos
+
+    amigos.forEach(amigo => {
+        const li = document.createElement('li');
+        li.textContent = amigo;
+        listaAmigos.appendChild(li);
+    });
+}
